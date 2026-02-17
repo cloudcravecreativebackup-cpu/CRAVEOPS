@@ -1,5 +1,6 @@
 
 export type ServiceType = 'Social Media Management' | 'Cloud Support' | 'Digital Solutions' | 'General Operations' | 'Switch2Tech Training';
+
 export type TaskCategory = 
   | 'Profile Optimisation' 
   | 'Highlight Optimisation' 
@@ -35,7 +36,7 @@ export interface Brand {
   orgId: string;
   name: string;
   services: ServiceType[];
-  leadId?: string; // Scoping brand to a specific lead's team
+  leadId?: string;
 }
 
 export interface CalendarEntry {
@@ -46,14 +47,14 @@ export interface CalendarEntry {
   topic: string;
   caption: string;
   visualRef: string;
-  assignedToId: string; // User ID
+  assignedToId: string;
 }
 
 export interface ContentCalendar {
   id: string;
   orgId: string;
   brandId: string;
-  name: string; // e.g., "Nov 2024 Strategy"
+  name: string;
   entries: CalendarEntry[];
   createdAt: string;
   leadId?: string;
